@@ -867,7 +867,8 @@ def msearch(argc,argv,hp):
 		print 'Failed to bind port %d' % lport
 		return
 
-	hp.send(request,server)
+	# hp.send(request,server)
+	hp.send(request,hp.ssock)
 	count = 0
 	start = time.time()
 
